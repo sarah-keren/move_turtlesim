@@ -1,0 +1,6 @@
+<launch>
+
+	<node pkg="turtlesim" name="sim" type="turtlesim_node"/>
+	<node pkg="move_turtlesim" name="forward" type="move_forward.py"/>
+
+</launch>

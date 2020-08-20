@@ -1,0 +1,12 @@
+<launch>
+
+	<node pkg="turtlesim" name="sim" type="turtlesim_node"/>
+	<node pkg="move_turtlesim" name="circle" type="move_circle.py"/>
+	<node pkg="rosservice" name="spawn" type="rosservice" args="call --wait /spawn 2 2 0.2 turtle2"/>
+	
+	<node pkg="turtlesim" name="mimic" type="mimic">
+		<remap from="input" to="turtle1"/>
+		<remap from="output" to="turtle2"/>
+	</node>
+
+</launch>
